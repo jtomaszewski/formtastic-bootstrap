@@ -17,12 +17,14 @@ module FormtasticBootstrap
 
           form_group_wrapping do
             label_html <<
-            if prepended_or_appended?(options)
-              template.content_tag(:div, :class => add_on_wrapper_classes(options).join(" ")) do
+            template.content_tag(:span, :class => 'form-wrapper') do
+              if prepended_or_appended?(options)
+                template.content_tag(:div, :class => add_on_wrapper_classes(options).join(" ")) do
+                  input_content
+                end
+              else
                 input_content
               end
-            else
-              input_content
             end
           end
         end

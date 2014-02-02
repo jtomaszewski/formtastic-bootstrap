@@ -8,8 +8,7 @@ module FormtasticBootstrap
       # TODO Support .inline
 
       def to_html
-        form_group_wrapping do
-          label_html <<
+        bootstrap_wrapping do
           hidden_field_for_all << # Might need to remove this guy.
           collection.map { |choice|
             choice_html(choice)
