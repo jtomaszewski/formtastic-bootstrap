@@ -13,7 +13,7 @@ module FormtasticBootstrap
             add_on_content(options[:append]),
             options[:append_content],
             hint_html,
-            error_html
+            error_html(:block)
           ].compact.join("\n").html_safe
 
           form_group_wrapping do
